@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    transition: 0.5s linear;
+    font-family: 'Sen';
+    font-size: 18px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 50px;
+    
+}
+html, body{
+    background-image: url('https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: white;
+    font-size: 35px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+a:hover{
+    color: rgb(255, 148, 166);
+}
+.content{
+    margin: auto;
+    width: 70%;
+    
+    border: solid white 1px;
+    border-radius: 5px;
+}
+.tab-content{
+    padding: 20px;
+    
+}
+
+.content ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+#duzina{
+    display: block;
+}
+#duzina-nav{
+    color: black;
+}
+
+.tab{
+    display: none;
+}
+
+.tab-content p{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    background: transparent;
+    height: 50px;
+    color: white;
+}
+.tab-content .jedinice{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+input{
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.425);
+    outline: none;
+    color: white;
+}
+
+.nav .nav-link.active, .nav .show{
+    background: rgba(123, 126, 136, 0.747) !important;
+    color: white !important;
+}
+.nav-link {
+    padding: 15px 5px;
+}
+input::placeholder{
+    color: white;
+}
+.nav-link{
+    color: white;
+    font-weight: 600;
+}
+.nav-tabs{
+    margin: 0 !important;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 5px;
+}
+.jed{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+}
+
+/* Tableti */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .content{
+        width: 100%;
+    }
+    .tab-content p{
+        padding-top: 20px;
+        height: 80px;
+        font-size: 16px;
+    }
+}
+
+/* Mali uredjaji*/
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    .content{
+        width: 100%;
+    }
+    .tab-content p{
+        height: 85px;
+        font-size: 16px;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 35px !important;
+    }
+    
+}
+
+/*veoma mali uredjaji*/
+@media only screen and (max-width: 600px){
+    .tab-content p{
+        padding-top: 10px;
+        height: 150px;
+        font-size: 15px;
+        padding-top: 20px;
+        margin-bottom: 0px; 
+    }
+    h1{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    a{
+        font-size: 14px;
+    }
+    .content{
+        width: 100%;
+    }
+    .tab-content .jedinice{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    h1{
+        font-size: 30px !important;
+    }
+    .content ul{
+        margin-bottom: 10px;
+    }
+}

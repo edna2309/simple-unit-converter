@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter mjernih jedinica</title>
+    <link rel="icon" href="https://www.flaticon.com/svg/vstatic/svg/2357/2357429.svg?token=exp=1616188260~hmac=059e72a5ec71dbd2faa6e679a2ea1a5c"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="konverter.js"></script>
+
+    
+</head>
+<body>
+        <h1>Konverter mjernih jedinica</h1>
+        <div class="content">
+        <ul class="nav nav-tabs">
+            <li class="active">
+            <a class="nav-link" data-toggle="tab" id="duzina-nav" href="#duzina" onclick="promijeniDuzina()">DUŽINA</a>
+            </li>
+
+            <li>
+            <a class="nav-link" data-toggle="tab" id="masa-nav" href= "#masa" onclick="promijeniMasa()">MASA</a>
+            </li>
+
+            <li>
+            <a class="nav-link" data-toggle="tab" id="volumen-nav" href="#volumen" onclick="promijeniVolumen()">VOLUMEN</a>
+            </li>
+
+            <li>
+                <a class="nav-link" data-toggle="tab" id="povrsina-nav" href="#povrsina" onclick="promijeniPovrsina()">POVRŠINA</a>
+            </li>
+        </ul>
+        
+        <div class="tab-content">
+
+            <!--DUZINA-->
+
+            <div class="tab tab-pane fade in active" id="duzina" >
+                <p>Dužina je mjerna veličina koja definiše razliku položaja dvije tačke u prostoru, tj. njihovu udaljenost ili put koji između njih treba prijeći pri pravolinijskom kretanju.</p>
+                <div class="jedinice">
+                    <div class="jed">
+                        <label for="kilometarInput">Kilometar</label>
+                        <input id= "kilometarInput" type="number" placeholder=". . ."  oninput="DuzinaKilometri(this.value)" >
+                    </div>
+
+                    <div class="jed">
+                        <label for="metarInput">Metar</label>
+                        <input id= "metarInput" type="number" placeholder=". . ." oninput="DuzinaMetri(this.value)">
+                    </div>
+                    
+                    <div class="jed">
+                        <label for="centimetarInput">Centimetar</label>
+                        <input id= "centimetarInput" type="number" placeholder=". . ." oninput="DuzinaCentimetri(this.value)">                      
+                    </div>
+                    <div class="jed">
+                        <label for="milimetarInput">Milimetar</label>
+                        <input id= "milimetarInput" type="number" placeholder=". . ." oninput="DuzinaMilimetri(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="miljaInput">Milja</label>
+                        <input id= "miljaInput" type="number" placeholder=". . ." oninput="DuzinaMilja(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="inchInput">Inč</label>
+                        <input id= "inchInput" type="number" placeholder=". . ." oninput="DuzinaInch(this.value)" >
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!--MASA-->
+            <div class="tab tab-pane fade" id="masa">
+                <p>Masa, u fizici, je osnovno fizikalno svojstvo svih tijela, veličina koja karakterizira količinu tvari u tijelu, jedna od osnovnih veličina Međunarodnoga sustava jedinica. Masa je mjera tromosti tijela.</p>
+                <div class="jedinice">
+                    <div class="jed">
+                        <label for="kilogramInput">Kilogram</label>
+                        <input id= "kilogramInput" type="number" placeholder=". . ." oninput="MasaKilogram(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="gramInput">Gram</label>
+                        <input id= "gramInput" type="number" placeholder=". . ." oninput="MasaGram(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="miligramInput">Miligram</label>
+                        <input id= "miligramInput" type="number" placeholder=". . ." oninput="MasaMiligram(this.value)">
+                    </div>
+                    
+                    <div class="jed">
+                        <label for="funtaInput">Funta</label>
+                        <input id= "funtaInput" type="number" placeholder=". . ." oninput="MasaFunta(this.value)">
+
+                    </div>
+                    <div class="jed">
+                        <label for="tonaInput">Tona</label>
+                        <input id= "tonaInput" type="number" placeholder=". . ." oninput="MasaTona(this.value)" >
+                    </div>
+                </div>
+            </div>
+
+            <!--VOLUMEN-->
+            <div class="tab tab-pane fade" id="volumen">
+                <p>Volumen, obujam ili zapremina (lat. volumen: zavoj, svitak), veličina definirana kao broj jedinica prostora što ga obuhvaća neko tijelo. Mjerna je jedinica volumena kubični metar.</p>
+                
+                <div class="jedinice">
+                    <div class="jed">
+                        <label for="litarInput">Litar</label>
+                        <input id= "litarInput" type="number" placeholder=". . ." oninput="VolumenLitar(this.value)">            
+                    </div>
+                    <div class="jed">
+                        <label for="decilitarInput">Decilitar</label>
+                        <input id= "decilitarInput" type="number" placeholder=". . ." oninput="VolumenDecilitar(this.value)">    
+                    </div>
+                    <div class="jed">
+                        <label for="centilitarInput">Centilitar</label>
+                        <input id= "centilitarInput" type="number" placeholder=". . ." oninput="VolumenCentilitar(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="kubniMetarInput">Kubni metar</label>
+                        <input id= "kubniMetarInput" type="number" placeholder=". . ." oninput="VolumenKubniMetar(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="kubniDecimetarInput">Kubni decimetar</label>
+                        <input id= "kubniDecimetarInput" type="number" placeholder=". . ." oninput="VolumenKubniDecimetar(this.value)" >
+                    </div>
+                </div>
+            </div>
+
+            <!--POVRSINA-->
+            <div class="tab tab-pane fade" id="povrsina">
+                <p>Površina je količina koja opisuje u kojoj je mjeri dvodimenzionalna figura ili oblik, ili planarne lamine, u ravni. Površina oblika može biti izmjerena poredeći oblik sa kvadratima fiksne veličine.</p>
+                
+                <div class="jedinice">
+                    <div class="jed">
+                        <label for="kvKilometarInput">Kvadratni kilometar</label>
+                        <input id="kvKilometarInput" type="number" placeholder=". . ." oninput="PovrsinaKvKilometar(this.value)">
+                    </div>
+                    <div class="jed">
+                        <label for="kvMetarInput">Kvadratni metar</label>
+                        <input id= "kvMetarInput" type="number" placeholder=". . ." oninput="PovrsinaKvMetar(this.value)" >
+                    </div>
+                    <div class="jed">
+                        <label for="kvCentimetarInput">Kvadratni centimetar</label>
+                        <input id= "kvCentimetarInput" type="number" placeholder=". . ." oninput="PovrsinaKvCentimetar(this.value)">              
+                    </div>
+                    <div class="jed">
+                        <label for="hektarInput">Hektar</label>
+                        <input id= "hektarInput" type="number" placeholder=". . ." oninput="PovrsinaHektar(this.value)" >
+                    </div>
+                    <div class="jed">
+                        <label for="kvJardInput">Kvadratni jard</label>
+                        <input id= "kvJardInput" type="number" placeholder=". . ." oninput="PovrsinaKvJard(this.value)" >
+                    </div>
+                    <div class="jed">
+                        <label for="kvStopaInput">Kvadratna stopa</label>
+                        <input id= "kvStopaInput" type="number" placeholder=". . ." oninput="PovrsinaKvStopa(this.value)">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
